@@ -1,0 +1,12 @@
+The corrected CSS (`bugSolution.css`) would address these issues by ensuring correct operator precedence using parentheses, specifying units consistently (e.g., using `px` everywhere or `%` everywhere), and carefully considering the context of the `calc()` function to ensure it applies as expected to the desired dimension (width or height). For example:
+
+```css
+/* Correct use of calc() with explicit parentheses and consistent units */
+.element {
+  width: calc(100% - (10px + 20px)); /* correct precedence */
+  height: calc(100vh - 100px);   /* clear context and consistent units */
+  padding: calc(10% + 10px);     /* correct unit handling */
+}
+```
+
+This clarifies the order of operations and ensures the calculations produce the intended results.  The units are consistent within each `calc()` function, avoiding potential inconsistencies in the browser's interpretation.
